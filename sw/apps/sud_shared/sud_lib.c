@@ -7,9 +7,9 @@ void load_sud_board(unsigned char board[SIZE][SIZE]) {
          
     #ifdef HLCM    
       char sud_in_file_path[200] ;          
-      char *sud_shared_path = getenv("SUD_SHARED");
+      char *k5_path = getenv("MY_K5_PROJ");
       #ifndef _GP_VAL_   
-      bm_sprintf(sud_in_file_path,"%s/%s",sud_shared_path,"$SUD_SHARED/sudoku_input_20blanks.txt"); // Easy one
+      bm_sprintf(sud_in_file_path,"%s/%s",k5_path,"$MY_K5_PROJ/sw/apps/sud_shared/sudoku_input_20blanks.txt"); // Easy one
       #else    
       bm_sprintf(sud_in_file_path,"%s/sudoku_input_%s.txt",sud_shared_path,EXPAND_AND_STRINGIFY(_GP_VAL_));  
       #endif 
@@ -17,9 +17,9 @@ void load_sud_board(unsigned char board[SIZE][SIZE]) {
     #else 
     char sud_in_file_path[80] ;                 
       #ifndef _GP_VAL_   
-      bm_sprintf(sud_in_file_path,"%s","$SUD_SHARED/sudoku_input_20blanks.txt"); // Easy one
+      bm_sprintf(sud_in_file_path,"%s","$MY_K5_PROJ/sw/apps/sud_shared/sudoku_input_20blanks.txt"); // Easy one
       #else    
-      bm_sprintf(sud_in_file_path,"$SUD_SHARED/sudoku_input_%s.txt",EXPAND_AND_STRINGIFY(_GP_VAL_));  
+      bm_sprintf(sud_in_file_path,"$MY_K5_PROJ/sw/apps/sud_shared/sudoku_input_%s.txt",EXPAND_AND_STRINGIFY(_GP_VAL_));  
       #endif
       
     #endif
