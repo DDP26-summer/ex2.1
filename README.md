@@ -8,10 +8,11 @@ implementation (`sud_basic`) and a hardware-accelerated version
 
 ```
 hw/
-└── sudx_basic/          RTL for the Sudoku hardware accelerator
+└── xlrs/
+    └── sudx_basic/        RTL for the Sudoku hardware accelerator
 sw/
 └── apps/
-    ├── sud_basic/        Software-only Sudoku solver
+    ├── sud_basic/         Software-only Sudoku solver
     ├── sud_shared/        Shared library, headers, and sample boards
     └── sudx_basic/        Software driver for the HW accelerator
 ```
